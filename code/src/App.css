@@ -1,0 +1,74 @@
+.mainContainer {
+  width: 100%;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.albumComponent {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h4 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sidebarComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
+
+/* Tablet */
+@media (min-width: 667px) {
+  .mainContainer {
+    width: 100%;
+  }
+
+  .albumComponent {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .sidebarComponent {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .mainContainer {
+    width: 100%;
+  }
+
+  .playlistTitle h4 {
+    display: none;
+  }
+
+  .albumComponent {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 100px;
+  }
+
+  .sidebarComponent {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-left: 25px;
+  }
+}
